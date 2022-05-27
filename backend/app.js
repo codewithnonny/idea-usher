@@ -26,6 +26,10 @@ const product = require("./routes/productRoute");
 
 app.use("/api", product);
 
+app.get("/", (req, res, next) => {
+  res.send("Server Running");
+});
+
 app.use(errorMiddleware);
 
 module.exports = app;
